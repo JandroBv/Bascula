@@ -19,7 +19,7 @@ namespace Bascula
         public MainWindow()
         {
             InitializeComponent();
-            Console.WriteLine("Hola mundo");
+            
         }
     }
 }
