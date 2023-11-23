@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bascula"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Background="#FFA0C897">
-        <Button Content="Nombre" Background="White" HorizontalAlignment="Center" VerticalAlignment="Top" Width="550" Height="80" Margin="0,10,0,0" BorderBrush="{x:Null}" Click="Button_Click" FontSize="24" FontFamily="Comic Sans MS" FontWeight="Bold">
+        Title="MainWindow" WindowState="Maximized" d:DesignHeight="823.2" d:DesignWidth="1461.6">
+    <Grid Background="#FFD9D9D9">
+        <Button Content="PEINTURE" Background="White" VerticalAlignment="Top" Width="706" Height="167" Margin="0,80,0,0" BorderBrush="{x:Null}" FontSize="70" FontFamily="Roboto" FontWeight="Bold">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Template">
@@ -25,13 +25,13 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button Content="" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" Height="80" BorderBrush="{x:Null}" Click="Button_Click" FontSize="24" FontFamily="Comic Sans MS" FontWeight="Bold" Margin="262,155,0,0" RenderTransformOrigin="0.5,0.5">
+        <Button Content="Historial" Background="White" Width="548" Height="412" BorderBrush="{x:Null}" FontSize="70" FontFamily="Roboto" FontWeight="Bold" Margin="855,200,0,0" Click="Button_Click" >
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="{x:Type Button}">
-                                <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" CornerRadius="10">
+                                <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
                                     <Border.Effect>
                                         <DropShadowEffect ShadowDepth="3" Direction="270" Opacity="0.7" BlurRadius="20" Color="Black"/>
                                     </Border.Effect>
@@ -43,27 +43,12 @@
                 </Style>
             </Button.Style>
         </Button>
-        <TextBlock HorizontalAlignment="Left" Margin="287,178,0,0" TextWrapping="Wrap" Text="Iniciar" VerticalAlignment="Top" FontSize="24" FontFamily="Comic Sans MS" FontWeight="Bold"/>
-        <Button Content="" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" Height="80" BorderBrush="{x:Null}" Click="Button_Click" FontSize="24" FontFamily="Comic Sans MS" FontWeight="Bold" Margin="262,267,0,0">
-            <Button.Style>
-                <Style TargetType="{x:Type Button}">
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="{x:Type Button}">
-                                <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" CornerRadius="10">
-                                    <Border.Effect>
-                                        <DropShadowEffect ShadowDepth="3" Direction="270" Opacity="0.7" BlurRadius="20" Color="Black"/>
-                                    </Border.Effect>
-                                    <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </Button.Style>
+        <Button Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="548" Height="412" FontSize="70" Margin="158,296,0,0" Click="Button_Click_1">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Iniciar" HorizontalAlignment="Left"/>
+                <Image Source="/assets/58950.png" Width="50" Height="50" HorizontalAlignment="Right"/>
+            </StackPanel>
         </Button>
-        <TextBlock HorizontalAlignment="Left" Margin="287,290,0,0" TextWrapping="Wrap" Text="Historial" VerticalAlignment="Top" FontSize="24" FontFamily="Comic Sans MS" FontWeight="Bold"/>
-        <Image HorizontalAlignment="Left" Height="55" Margin="449,279,0,0" VerticalAlignment="Top" Width="64" Source="/assets/32223.png"/>
-        <Image HorizontalAlignment="Left" Height="55" Margin="449,167,0,0" VerticalAlignment="Top" Width="64" Source="/assets/58950.png"/>
+        <Image HorizontalAlignment="Left" Height="105" Margin="1257,450,0,0" VerticalAlignment="Top" Width="125" Source="/assets/32223.png" RenderTransformOrigin="0.713,-0.27"/>
     </Grid>
 </Window>
