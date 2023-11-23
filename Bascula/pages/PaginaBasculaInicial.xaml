@@ -5,22 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bascula.pages"
         mc:Ignorable="d"
-        Title="Window1" WindowState="Maximized" d:DesignWidth="1617" WindowStyle="None">
-    <Grid Background="#A0C897">
-        <Image Source="/assets/LeftArrowIcon.png" Height="100" Width="100" Cursor="Hand" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
-        <Border HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="40" BorderBrush="#D9D9D9" BorderThickness="14" Width="1080" Height="1000" Padding="0,0,0,0" Background="#D9D9D9">
-            <Grid Background="#D9D9D9">
-                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" TextAlignment="Center" TextWrapping="Wrap" Margin="0,81,0,0" FontSize="64" FontWeight="ExtraBold" FontFamily="Comic Sans MS">COLOQUE EL RECIPIENTE A UTILIZAR EN LA BASCULA</TextBlock>
-                <TextBlock FontSize="54" FontWeight="Bold" VerticalAlignment="Center" Margin="50,0,0,40" HorizontalAlignment="Left" FontFamily="Comic Sans MS">Peso Total:</TextBlock>
-                <Border CornerRadius="40" Background="#fff" BorderBrush="#fff" BorderThickness="15"  Height="170" Width="950" VerticalAlignment="Bottom" Margin="0,0,0,240" Padding="0,0,0,0">
+        Title="Window1" WindowState="Maximized" d:DesignWidth="1366" WindowStyle="SingleBorderWindow" d:DesignHeight="768">
+
+    <Grid Background="#F4F4F3">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid Background="Transparent" Grid.Row="0">
+            <Image Source="/assets/LeftArrowIcon.png" Height="70" Width="70" HorizontalAlignment="Left" />
+            <Image Source="/assets/HomeIcon.png" HorizontalAlignment="Right" Height="60" Width="60" Margin="0,0,40,0"/>
+        </Grid>
+        <Grid Background="#4CF9D5" Grid.Row="1">
+            <TextBlock VerticalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWithOverflow" FontSize="44" FontWeight="ExtraBold" FontFamily="Roboto">COLOQUE EL RECIPIENTE A UTILIZAR EN LA BASCULA</TextBlock>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2.5*"/>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="1" VerticalAlignment="Center" >
+                <TextBlock FontSize="42" FontWeight="Bold" FontFamily="Roboto">Peso Total:</TextBlock>
+                <Border CornerRadius="40" BorderBrush="#fff" Panel.ZIndex="2" BorderThickness="22" Padding="0,0,0,0" Height="120" Margin="0,45,0,0" HorizontalAlignment="Stretch">
                     <Grid Background="#fff">
-                        <TextBlock VerticalAlignment="Center" FontSize="45" FontWeight="Bold" FontFamily="Comic Sans MS" Margin="40,0,0,0">0.00 g</TextBlock>
+                        <TextBlock VerticalAlignment="Center" FontSize="38" Background="#fff" FontWeight="Bold" FontFamily="Roboto" Margin="40,0,0,0">0.00 g</TextBlock>
                     </Grid>
                 </Border>
-                <TextBlock VerticalAlignment="Bottom" FontSize="32" FontFamily="Comic Sans MS" FontWeight="Bold" HorizontalAlignment="Left" Margin="55,0,0,130">Coloque el recipiente para continuar</TextBlock>
-            </Grid>
-        </Border>
-        
-
+                <Border CornerRadius="40" BorderThickness="12"  BorderBrush="#999" Padding="0,0,0,0" Height="120" Margin="10,-112,0,0">
+                    
+                </Border>
+                <TextBlock  FontSize="25" FontFamily="Roboto" FontWeight="SemiBold" Margin="0,50,0,0" TextWrapping="WrapWithOverflow">Coloque el recipiente para continuar</TextBlock>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
