@@ -21,14 +21,5 @@ namespace Bascula
             InitializeComponent();   
         }
 
-        private void Button_Inicio(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
     }
 }
