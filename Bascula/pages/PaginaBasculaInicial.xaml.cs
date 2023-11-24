@@ -29,7 +29,7 @@ namespace Bascula.pages
 
         private async void visibleObjects()
         {
-            await Task.Delay(3000);
+            await Task.Delay(000);
             BotonContinuar.Visibility = Visibility.Visible;
             CheckIcon.Visibility = Visibility.Visible;
         }
