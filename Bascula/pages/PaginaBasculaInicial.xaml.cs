@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Threading.Tasks;
 
 namespace Bascula.pages
 {
@@ -22,6 +23,19 @@ namespace Bascula.pages
         public PaginaBasculaInicial()
         {
             InitializeComponent();
+            visibleObjects();
+
         }
+
+        private async void visibleObjects()
+        {
+            await Task.Delay(3000);
+            BotonContinuar.Visibility = Visibility.Visible;
+            CheckIcon.Visibility = Visibility.Visible;
+        }
+
+        
+        
+
     }
 }
