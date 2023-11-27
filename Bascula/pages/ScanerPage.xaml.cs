@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Bascula.pages
 {
@@ -52,7 +54,6 @@ namespace Bascula.pages
 
         };
         
-
         public ScanerPage()
         {
             InitializeComponent();
@@ -170,6 +171,35 @@ namespace Bascula.pages
             TablaColores.Children.Add(borrarBorder);
 
         }
+
+        private void saveMezcla(Object sender, RoutedEventArgs e)
+        {
+            var textBlock = new TextBlock();
+            var timer = new DispatcherTimer();
+
+            textBlock.Background = new SolidColorBrush(Color.FromRgb(0, 255, 10));
+            textBlock.VerticalAlignment = VerticalAlignment.Center;
+            textBlock.HorizontalAlignment = HorizontalAlignment.Center;
+            textBlock.Text = "Se ha agregado la mezcla";
+            textBlock.FontSize = 58;
+            textBlock.FontWeight = FontWeights.DemiBold;
+
+            textBlock.Padding = new Thickness(40);
+            Grid.SetRowSpan(textBlock, 3);
+            ScanerContainer.Children.Add(textBlock);
+
+            timer.Interval = TimeSpan.FromSeconds(5);
+            timer.Start();
+            timer.Tick += (sender, args) =>
+            {
+                ScanerContainer.Children.Remove(textBlock);
+                timer.Stop();
+            };
+
+
+        }
+
+       
     }
     
 }

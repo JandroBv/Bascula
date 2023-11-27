@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Bascula.pages"
         mc:Ignorable="d"
         Title="ScanerPage" WindowState="Maximized" d:DesignHeight="768" d:DesignWidth="1440" >
-    <Grid>
+    <Grid Name="ScanerContainer">
         <Grid.RowDefinitions>
             <RowDefinition Height="110"/>
             <RowDefinition Height="120"/>
@@ -31,7 +31,7 @@
                 </Grid.RowDefinitions>
                 
                 <Button Content="Agregar" FontSize="62" FontWeight="DemiBold" Background="Green" Grid.Row="0" MaxWidth="380" Margin="0,0,0,12"></Button>
-                <Button Background="red" Grid.Row="1" Content="Finalizar" FontSize="62" FontWeight="DemiBold" MaxWidth="380" Margin="0,12,0,0"></Button>
+                <Button Background="red" Click="saveMezcla" Grid.Row="1" Content="Finalizar" FontSize="62" FontWeight="DemiBold" MaxWidth="380" Margin="0,12,0,0"></Button>
             </Grid>
             <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="1" Margin="20,35,60,35">
                 <Grid Name="TablaColores">
