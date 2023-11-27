@@ -184,7 +184,7 @@ namespace Bascula.pages
             textBlock.FontSize = 58;
             textBlock.FontWeight = FontWeights.DemiBold;
 
-            textBlock.Padding = new Thickness(40);
+            textBlock.Padding = new Thickness(4);
             Grid.SetRowSpan(textBlock, 3);
             ScanerContainer.Children.Add(textBlock);
 

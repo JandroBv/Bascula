@@ -14,6 +14,7 @@
     <None Remove="assets\checkIcon.png" />
     <None Remove="assets\HomeIcon.png" />
     <None Remove="assets\LeftArrowIcon.png" />
+    <None Remove="assets\printerIcon.png" />
     <None Remove="assets\TrashIcon.png" />
   </ItemGroup>
 
@@ -23,6 +24,7 @@
     <Resource Include="assets\checkIcon.png" />
     <Resource Include="assets\HomeIcon.png" />
     <Resource Include="assets\LeftArrowIcon.png" />
+    <Resource Include="assets\printerIcon.png" />
     <Resource Include="assets\TrashIcon.png" />
   </ItemGroup>
 
